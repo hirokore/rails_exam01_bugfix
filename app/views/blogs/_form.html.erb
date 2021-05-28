@@ -1,3 +1,5 @@
+<%# エラー原因: 指定したモデルがnewとeditで区別されていなかったため%>
+<%# 修正の意図: @userとして、区別するように変更%>
 <%= form_with(model: @blog, local: true) do |form| %>
   <% if blog.errors.any? %>
     <div id="error_explanation">
