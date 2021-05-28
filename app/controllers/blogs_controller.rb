@@ -44,6 +44,8 @@ class BlogsController < ApplicationController
   end
 
   def blog_params
-    params.require(:blog).permit(:title)
+      # エラー原因: ストロングパラメータが不足していたため
+      # 修正の意図: 追加した
+    params.require(:blog).permit(:title,:content)
   end
 end
