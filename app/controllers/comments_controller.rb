@@ -9,7 +9,9 @@ class CommentsController < ApplicationController
   def destroy
     @comment = @blog.comments.find(params[:id])
     @comment.destroy
-    redirect_to
+    # エラー原因:redirect_toの指定先がない
+    # 修正の意図:指定先を指定
+    redirect_to blog_path(@blog)
   end
 
   private
