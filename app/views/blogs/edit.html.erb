@@ -1,5 +1,7 @@
 <h1>Editing Blog</h1>
 
+  <%# エラー原因:アソシエーション名が慣習に沿ってない %>
+  <%# 修正の意図:慣習に合わせて、commentsに変更 %>
 <%= render 'form', blog: @blog %>
 
 <%= link_to 'Show', @blog %> |

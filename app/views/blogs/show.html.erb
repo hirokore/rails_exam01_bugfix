@@ -15,7 +15,9 @@
 
   <p>
     <strong>Comment:</strong>
-    <%= @blog.comments.count.to_i + "comments" %>
+    <%# エラー原因:表示したい文字列をruby構文内に含んでいたため  %>
+    <%# 修正の意図:構文の外に記載しなおした%>
+    <%= @blog.comments.count.to_i %>comments
   </p>
 
   <p>
