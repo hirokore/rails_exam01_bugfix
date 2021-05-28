@@ -1,5 +1,7 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: [:show, :edit, :update]
+  # エラー原因: destroyにset_blogが含まれていなかったため
+  # 修正の意図: 追加した
+  before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
   def index
     @blogs = Blog.all
